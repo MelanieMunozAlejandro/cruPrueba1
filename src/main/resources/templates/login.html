@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <script src="script.js"></script>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-form {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            animation: slide-up 0.5s ease;
+        }
+
+        .login-form h1 {
+            margin-bottom: 20px;
+            color: #333333;
+        }
+
+        .login-form input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .login-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .login-form button:hover {
+            background-color: #0056b3;
+        }
+
+        @keyframes slide-up {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <form class="login-form">
+        <h1>Iniciar Sesión</h1>
+        <input type="text" id="username" placeholder="Usuario" required>
+        <input type="password" id="password" placeholder="Contraseña" required>
+        <h1></h1>
+        <button type="submit">Ingresar</button>
+        <h1></h1>
+        <button type="button" id="registerButton">Registro</button>
+    </form>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>

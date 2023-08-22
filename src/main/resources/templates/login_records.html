@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registros de inicio de sesión</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 70%;
+            margin: 20px auto;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const table = document.querySelector('table');
+            table.style.opacity = 0;
+            setTimeout(() => {
+                table.style.opacity = 1;
+            }, 500);
+        });
+    </script>
+</head>
+<body>
+<h1>Login Records</h1>
+
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Fecha Ingreso</th>
+        <th>Fecha Cierre</th>
+    </tr>
+    <tr th:each="record : ${loginRecords}">
+        <td th:text="${record.idSession}"></td>
+        <td th:text="${record.fechaIngreso}"></td>
+        <td th:text="${record.fechaCierre}"></td>
+    </tr>
+</table>
+</body>
+</html>
